@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://172.20.133.23:3306/cnbp?useUnicode=true&characterEncoding=UTF-8
+    username: cnbp
+    password: 6dvu6QcK0c0V3nSmNwry
+
+center:
+  s90001: http://172.20.133.21:9989/provisional-certificate/petition/jf210100/cxjm/mobile
+  s90002: http://172.20.133.21:9989/provisional-certificate/petition/jf210100/lhjy/mobile
+  s90003: http://172.20.133.21:9989/provisional-certificate/petition/jf210100/feehistory/mobile
+
+http:
+  targetAttribute:
+    token: MIGfMA0GCSqGSIb3DQEa
+    toUser: 860001
+    fromUser: 800002
+    nonce: 0
+    createTime: 0
+    msgType: json

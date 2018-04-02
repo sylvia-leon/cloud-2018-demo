@@ -1,0 +1,65 @@
+endpoints:
+  shutdown:
+    enabled: true
+management:
+  port: 7999
+server:
+  address: 0.0.0.0
+spring:
+  application:
+    name: joint-demo
+  datasource:
+    initial-size: 10
+    min-idle: 10
+    max-active: 50
+    validation-query: select 1
+    test-while-idle: true
+    test-on-borrow: true
+    test-on-return: false
+    test-on-connect: false
+    max-wait: 5000
+    time-between-eviction-runs-millis: 120000
+    min-evictable-idle-time-millis: 300000
+  http:
+    multipart:
+      location: ${applog.tmpdir}
+      enabled: true
+      max-file-size: 1MB
+      max-request-size: 4MB
+app:
+  api: api
+  task: task
+  si: si
+  manager: mgr
+  basedir: /work/${spring.application.name}
+joint:
+  meta:
+    version: v2.0
+    access-outer:
+      enable: true
+      token: Lj2Ws9uzO16reHc3Py6tpgCsxKtgq9WB
+      funcRegx: ^(G|F|P|m|S)\d+$
+      encryption:
+        enable: false
+    access-inner:
+      enable: false
+      token: Abcde12345
+      funcRegx: ^T\d+$
+      encryption:
+        enable: false
+  test:
+    info:
+    - 123334
+    - 210106198810170319
+    - 210123199903121234
+    - 2012
+  func:
+    map:
+      m20101:
+        funcid: m20101
+        enable: true
+        query: false
+logging:
+  file: joint.log
+  level:
+    neusoft: debug
